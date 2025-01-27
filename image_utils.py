@@ -27,10 +27,10 @@ def edge_detection(image_array):
         [0, 0, 0],
         [-1, -2, -1]]) 
      
-    kernelY = np.array([
-        [1, 2, 1],
-        [0, 0, 0],
-        [-1, -2, -1] ])
+   kernelX = np.array([
+        [-1, 0, 1],
+        [-2, 0, 2],
+        [-1,0, 1] ])
     edgeY = convolve2d(grayscale_image, kernelY, mode='same', boundary='fill', fillvalue=0)
     edgeX = convolve2d(grayscale_image, kernelX, mode='same', boundary='fill', fillvalue=0)
 
