@@ -2,17 +2,14 @@ from image_utils import load_image, edge_detection
 from PIL import Image
 from skimage.filters import median
 from skimage.morphology import ball
-
+from scipy.signal import convolve2d
 import numpy as np
-from PIL import Image
-import matplotlib.pyplot as plt
+
 
 def load_image(file_path):
     image = Image.open(file_path)
     image_array = np.array(image)
     return image_array 
-
-load_image('/argen.jpg')
 
 from scipy.signal import convolve2d
 import numpy as np
