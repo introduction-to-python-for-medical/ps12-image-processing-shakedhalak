@@ -1,18 +1,14 @@
-from image_utils import load_image, edge_detection
 from PIL import Image
 from skimage.filters import median
 from skimage.morphology import ball
 from scipy.signal import convolve2d
 import numpy as np
 
-
 def load_image(file_path):
     image = Image.open(file_path)
     image_array = np.array(image)
     return image_array 
 
-from scipy.signal import convolve2d
-import numpy as np
 
 def edge_detection(image_array):
    
