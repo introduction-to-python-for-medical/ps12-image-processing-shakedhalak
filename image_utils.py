@@ -31,6 +31,6 @@ def edge_detection(image_array):
     edgeX = convolve2d(gray_image, kernelX, mode='same', boundary='fill', fillvalue=0)
 
     edgeMAG = np.sqrt(edgeX**2 + edgeY**2)
-        return edgeMAG
+    return edgeMAG
 
   
